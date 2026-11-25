@@ -1,0 +1,66 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "Thahsin",
+    "email": "thahsin@gmail.com",
+    "password": "thahsin@123"
+}
+
+###
+GET http://127.0.0.1:8000/users/
+
+###
+POST http://127.0.0.1:8000/hotels/
+Content-Type: application/json
+Authorization: Basic Ashaa:ashaa@123
+
+{
+    "title": "Beach Resort",
+    "location": "Ernakulam",
+    "description": "Beautiful nature resort",
+    "price_per_day": 3000
+}
+
+###
+GET http://127.0.0.1:8000/hotels/
+Authorization: Basic Thahsin:thahsin@123
+
+###
+GET http://127.0.0.1:8000/hotel/4/
+Authorization: Basic Thahsin:thahsin@123
+
+###
+PUT http://127.0.0.1:8000/hotel/3/
+Content-Type: application/json
+Authorization: Basic Ashaa:ashaa@123
+
+{
+    "title": "Luxury Sea View Resort",
+    "location": "Cherai",
+    "description": "Luxury beachside resort",
+    "price_per_day": 1500
+}
+
+###
+POST http://127.0.0.1:8000/hotel/3/bookings/
+Content-Type: application/json
+Authorization: Basic Ashaa:ashaa@123
+
+{
+    "username": "Ashaa",
+    "check_in": "2026-12-20",
+    "check_out": "2026-12-23"
+}
+###
+GET http://127.0.0.1:8000/hotel/3/bookings/
+Authorization: Basic Ashaa:ashaa@123
+
+###
+DELETE http://127.0.0.1:8000/hotel-booking/1/
+Authorization: Basic Ashok:ashoo@123
+
+###
+DELETE http://127.0.0.1:8000/hotel/1/
+Authorization: Basic Ashok:ashoo@123
